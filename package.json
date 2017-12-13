@@ -1,0 +1,19 @@
+{
+  "name": "miniGif",
+  "version": "1.0.0",
+  "description": "\\",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "formidable": "^1.1.1",
+    "gm": "^1.23.0",
+    "morgan": "^1.9.0",
+    "node-schedule": "^1.2.5",
+    "nodemon": "^1.12.5",
+    "webimg": "^0.3.3"
+  },
+  "scripts": {
+    "start": "set PORT=82&&nodemon server.js"
+  }
+}

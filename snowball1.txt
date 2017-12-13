@@ -1,0 +1,145 @@
+* images/giphy.gifgap-keepdelay.gif 70 images
+  logical screen 300x262
+  global color table [32]
+  background 24
+  loop forever
+  + image #0 300x262
+    disposal asis delay 0.09s
+  + image #1 300x262 transparent 22
+    disposal asis delay 0.09s
+  + image #2 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #3 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #4 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #5 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #6 300x262 transparent 24
+    disposal asis delay 0.09s
+  + image #7 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #8 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #9 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #10 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #11 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #12 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #13 300x262 transparent 23
+    disposal asis delay 0.09s
+  + image #14 300x262 transparent 24
+    disposal asis delay 0.09s
+  + image #15 300x262 transparent 24
+    disposal asis delay 0.09s
+  + image #16 300x262 transparent 25
+    disposal asis delay 0.09s
+  + image #17 300x262 transparent 24
+    disposal asis delay 0.09s
+  + image #18 300x262 transparent 25
+    disposal asis delay 0.09s
+  + image #19 300x262 transparent 24
+    disposal asis delay 0.09s
+  + image #20 300x262 transparent 26
+    disposal asis delay 0.09s
+  + image #21 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #22 300x262 transparent 18
+    disposal asis delay 0.09s
+  + image #23 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #24 300x228 at 0,34 transparent 19
+    disposal asis delay 0.09s
+  + image #25 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #26 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #27 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #28 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #29 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #30 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #31 300x262 transparent 6
+    disposal asis delay 0.09s
+  + image #32 298x262 transparent 6
+    disposal asis delay 0.09s
+  + image #33 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #34 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #35 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #36 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #37 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #38 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #39 300x262 transparent 20
+    disposal asis delay 0.09s
+  + image #40 300x262 transparent 25
+    disposal asis delay 0.09s
+  + image #41 300x262 transparent 26
+    disposal asis delay 0.09s
+  + image #42 300x262 transparent 20
+    disposal asis delay 0.09s
+  + image #43 300x262 transparent 20
+    disposal asis delay 0.09s
+  + image #44 300x262 transparent 19
+    disposal asis delay 0.09s
+  + image #45 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #46 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #47 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #48 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #49 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #50 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #51 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #52 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #53 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #54 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #55 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #56 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #57 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #58 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #59 300x262 transparent 16
+    disposal asis delay 0.09s
+  + image #60 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #61 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #62 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #63 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #64 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #65 300x262 transparent 7
+    disposal asis delay 0.09s
+  + image #66 300x262 transparent 17
+    disposal asis delay 0.09s
+  + image #67 300x262 transparent 20
+    disposal asis delay 0.09s
+  + image #68 300x262 transparent 20
+    disposal asis delay 0.09s
+  + image #69 300x262 transparent 20
+    disposal asis delay 0.09s

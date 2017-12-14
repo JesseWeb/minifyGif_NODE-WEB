@@ -25,9 +25,6 @@ app.use('/uploadGif', uploadGifRouter)
 
 app.use('/product',userDownloadRouter)
 app.get('/',(req,res,next) => {
-    // req.header({
-    //     "Content-Type":'text/html'
-    // })
     let indexPath = path.resolve(__dirname,'./static/index.html')
     res.sendFile(indexPath)
 })

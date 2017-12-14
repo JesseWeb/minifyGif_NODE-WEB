@@ -25,17 +25,22 @@ router.post('/', (req, res, next) => {
             let gap = fields.gap
             let quality = fields.quality
             let size = fields.size
+            let index = fields.index
             miniGif({
                 gap,
                 quality,
                 files,
-                size
+                size,
+                index
             }).then(({paths, code}) => {
                 let arr = []
                 paths.forEach(obj => {
                     arr.push({
-                        url:'http://'+req.hostname+portStr+'/product/'+obj,
-                        size:fs.statSync('./product/'+obj).size
+                        url:'http://'+req.hostname+portStr+'/product/'+obj.url,
+                        size:fs.statSync('./product/'+obj.url).size,
+                        index:obj.index,
+                        name:obj.name,
+                        originSize:obj.originSize
                     })
                 });
 

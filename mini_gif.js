@@ -4,7 +4,8 @@
 */
 var fs = require('fs'),
     gm = require('gm'),
-    productDir = 'product'
+    productDir = './product',
+    path = require('path');
 const childProcess = require('child_process')
 var crypto = require('crypto');
 const spawn = childProcess.spawn
@@ -15,7 +16,8 @@ module.exports = ({
     files,
     gap,
     quality,
-    size
+    size,
+    index
 }) => {
     return new Promise((resolve, reject) => {
         let file = files
@@ -28,6 +30,7 @@ module.exports = ({
             if (files.hasOwnProperty(file)) {
                 let obj = files[file]
                 let outputFileName = 'mini-' + obj.name
+                let originSize = obj.size
                 let outputFilePath = productDir + outputFileName
                 let image = gm(obj.path)
                 image.identify((err, val) => {
@@ -65,7 +68,8 @@ module.exports = ({
                     let params = []
                     params.push("--unoptimize")
                     params.push(obj.path)
-                    params.push("--colors=" + quality)
+                    params.push("--colors=" + (val.color * quality / 100).toFixed(0))
+                    
                     var tempdelay = delayList[0]
                     for (let i = 1; i < frames_count; i++) {
                         if (i % gap == 0) {
@@ -76,12 +80,12 @@ module.exports = ({
                         tempdelay += delayList[i]
                     }
                     params.push("--optimize=3")
-                    params.push("--resize="+size)
+                    params.push("--resize=" + size)
                     params.push("-o")
                     var md5 = crypto.createHash('md5');
                     var hash = md5.update(String(new Date().getTime())).digest('hex')
-                    params.push(productDir + '/' + hash+outputFileName)
-                    paths.push(hash+outputFileName)
+                    params.push(productDir + '/' + hash + outputFileName)
+                    paths.push({url:hash + outputFileName,index,name:obj.name,originSize})
                     let childProcess = spawn("gifsicle", params, {
                         stdio: 'inherit'
                     })

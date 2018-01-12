@@ -5,7 +5,6 @@ let fs = require('fs')
 let path = require('path')
 let port = process.env.PORT
 const formidable = require('formidable')
-let portStr = process.env.PORT != 80 ? ':' + process.env.PORT : ''
 router.post('/', (req, res, next) => {
     res.header({
         "content-type": "application/json",
@@ -35,7 +34,7 @@ router.post('/', (req, res, next) => {
                 let arr = []
                 result.forEach(obj => {
                     arr.push({
-                        url: 'http://' + req.hostname + portStr + '/product/' + obj.url,
+                        url: '/product/' + obj.url,
                         size: fs.statSync('./product/' + obj.url).size,
                         name: obj.name,
                         originSize: obj.originSize

@@ -1,3 +1,0 @@
-::1 - - [12/Jan/2018:08:45:58 +0000] "POST /uploadGif HTTP/1.1" 200 410
-::1 - - [12/Jan/2018:08:45:58 +0000] "GET /product/8721ed43ef9a075801ac3c4acc3382d0mini-logo.cce67f8.gif HTTP/1.1" 200 312523
-::1 - - [12/Jan/2018:08:45:58 +0000] "GET /product/b14084617197cdaae0cc9594db1d0a12mini-4fde31e4e9319d8ce95f3225af7bae9bmini-1.gif HTTP/1.1" 200 717031

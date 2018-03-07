@@ -61,6 +61,9 @@ npm run start
 
 具体使用功能压缩成什么样子,还请大家自己去研究,找到最适合的图片参数
 
+## Future
+加入指定压缩后文件size的形式来压缩,可选通过高度或质量达到压缩至指定size(kb)
+
 ## 友情链接
 
 view实现框架 [Vue](https://cn.vuejs.org/)

@@ -12,7 +12,7 @@ const spawn = childProcess.spawn
 if (!fs.existsSync(productDir)) {
     fs.mkdirSync(productDir)
 }
-module.exports = async({
+module.exports = async ({
     files,
     gap,
     quality,
@@ -97,17 +97,38 @@ function processImage(obj, {
             var md5 = crypto.createHash('md5');
             var hash = md5.update(String(new Date().getTime())).digest('hex')
             params.push(productDir + '/' + hash + outputFileName)
-            paths={
+            paths = {
                 url: hash + outputFileName,
                 name: obj.name,
                 originSize,
-                code:0
+                code: 0
             }
             let childProcess = spawn("gifsicle", params, {
                 stdio: 'inherit'
             })
             childProcess.on('exit', (code) => {
-                resolve(paths)
+                if (code == 0) {
+                    resolve(paths)
+                }
+                else {
+                    reject(code)
+                }
+            })
+            childProcess.on('end', (code) => {
+                if (code == 0) {
+                    resolve(paths)
+                }
+                else {
+                    reject(code)
+                }
+            })
+            childProcess.on('close', (code) => {
+                if (code == 0) {
+                    resolve(paths)
+                }
+                else {
+                    reject(code)
+                }
             })
         })
     })

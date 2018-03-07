@@ -5,6 +5,19 @@ let fs = require('fs')
 let path = require('path')
 let port = process.env.PORT
 const formidable = require('formidable')
+
+function jugleIsGif(files){
+    let flag = true
+    for (const key in files) {
+        if (files.hasOwnProperty(key)) {
+            const obj = files[key];
+            if(obj.type!="image/gif"){
+                flag = false
+            }
+        }
+    }
+    return flag
+}
 router.post('/', (req, res, next) => {
     res.header({
         "content-type": "application/json",
@@ -20,8 +33,15 @@ router.post('/', (req, res, next) => {
                 message: "传入参数解析失败",
                 data: 'error'
             })
-        } else {
-
+        } if(!jugleIsGif(files)){
+            res.status(200)
+            res.json({
+                code: 0002,
+                message: "请上传gif图片",
+                data: 'error'
+            })
+        }
+        else {
             let gap = fields.gap
             let quality = fields.quality
             let size = fields.size

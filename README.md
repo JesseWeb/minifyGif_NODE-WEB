@@ -75,4 +75,4 @@ viewMaterial框架[element](https://github.com/ElemeFE/element)
 
 主要图片解析库 [gm](https://github.com/aheckmann/gm)
 
-主要图片处理库 [Gifsicle](https://github.com/aheckmann/gm)
+主要图片处理库 [Gifsicle](http://www.lcdf.org/gifsicle/)

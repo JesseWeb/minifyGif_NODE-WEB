@@ -7,12 +7,13 @@
   "dependencies": {
     "express": "^4.16.2",
     "formidable": "^1.1.1",
+    "gifsicle": "^3.0.4",
     "gm": "^1.23.0",
     "morgan": "^1.9.0",
     "node-schedule": "^1.2.5",
     "nodemon": "^1.12.5"
   },
   "scripts": {
-    "start": "nodemon  --harmony server.js"
+    "start": "set PORT=80 && nodemon  --harmony server.js"
   }
 }

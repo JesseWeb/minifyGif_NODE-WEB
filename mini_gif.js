@@ -6,7 +6,7 @@ var fs = require('fs'),
     gm = require('gm'),
     productDir = './product',
     path = require('path');
-const {execFile} = require('child_process');
+const { execFile } = require('child_process');
 var crypto = require('crypto');
 const gifsicle = require('gifsicle');
 if (!fs.existsSync(productDir)) {
@@ -92,16 +92,18 @@ function processImage(obj, {
                 tempdelay += delayList[i]
             }
             params.push("--optimize=3")
-            params.push("--resize=" + size)
+            if (size) {
+                params.push("--resize=" + size)
+            }
             params.push("-o")
             var md5 = crypto.createHash('md5');
             var hash = md5.update(String(new Date().getTime())).digest('hex')
-           
+
             params.push(productDir + '/' + hash + outputFileName)
             execFile(gifsicle, params, err => {
-                if(err){
+                if (err) {
                     reject(-1)
-                }else{
+                } else {
                     paths = {
                         url: hash + outputFileName,
                         name: obj.name,

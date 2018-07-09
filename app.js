@@ -15,7 +15,7 @@ var j = schedule.scheduleJob(rule, () => {
     emptyDir('product')
 })
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
-app.use(morgan('common',{stream: accessLogStream}))
+// app.use(morgan('common',{stream: accessLogStream}))
 
 app.all('/uploadGif', (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");

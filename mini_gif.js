@@ -1,6 +1,6 @@
 /*
     code:-1 表示图片解析失败
-    code: 1 表示图片生成失败
+    code: 1 表示图片生成成功
 */
 var fs = require('fs'),
     gm = require('gm'),
